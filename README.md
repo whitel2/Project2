@@ -6,14 +6,14 @@ Divide out tasks\
 Create a branch for each person\
 Notes:\
 Error Checking: Test for merge conflicts before merging.\
-Testing: Use a test driver in your branch for verifying individual components.\
+Testing: Use a test driver in your branch for verifying individual components.
 
 ## Task 2: Lexicographical Sort
 Use a Radix Sort with a queue to manage words during the sort process\
 Write a function to sort the word list.\
 Notes:\
 Error Checking: Ensure input list is non-empty.\
-Testing: Test with edge cases, e.g., sorted input, reverse-sorted input, single word.\
+Testing: Test with edge cases, e.g., sorted input, reverse-sorted input, single word.
 
 ## Task 3: Remove Duplicates
 Write a function that removes duplicates from a sorted word list.\
@@ -23,7 +23,7 @@ Error Checking: Verify the input is sorted before deduplication.\
 Testing: Test with lists containing:\
 No duplicates.\
 Some duplicates.\
-All duplicates.\
+All duplicates.
 
 ## Task 4: Find Valid Transformations
 Develop a function to find all valid one-letter transformations.\
@@ -33,12 +33,12 @@ Notes:\
 Error Checking: Verify words are the same length. Check if dictionary data is available.\
 Testing: Test with:\
 Words with no valid transformations.\
-Words with multiple transformations.\
+Words with multiple transformations.
 
 ## Task 5: Solve the Problem
 Develop a function to find a solution using valid transformations.\
 Use a stack to store the sequence of transformations\
-###### Extra Credit: Use a queue for breadth-first search (BFS) to find the most efficient path.
+**Extra Credit: Use a queue for breadth-first search (BFS) to find the most efficient path.
 Output each step/word and the total number of steps.\
 Notes:\
 Error Checking: Check that the start and target words are in the dictionary.\
