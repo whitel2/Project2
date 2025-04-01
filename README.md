@@ -4,21 +4,21 @@
 Add the professor as a collaborator\
 Divide out tasks\
 Create a branch for each person\
-Notes:\\
+Notes:\ \
 Error Checking: Test for merge conflicts before merging.\
 Testing: Use a test driver in your branch for verifying individual components.
 
 ## Task 2: Lexicographical Sort
 Use a Radix Sort with a queue to manage words during the sort process\
 Write a function to sort the word list.\
-Notes:\\
+Notes:\ \
 Error Checking: Ensure input list is non-empty.\
 Testing: Test with edge cases, e.g., sorted input, reverse-sorted input, single word.
 
 ## Task 3: Remove Duplicates
 Write a function that removes duplicates from a sorted word list.\
 Use a vector to manage words.\
-Notes:\\
+Notes:\ \
 Error Checking: Verify the input is sorted before deduplication.\
 Testing: Test with lists containing:\
 No duplicates.\
@@ -29,7 +29,7 @@ All duplicates.
 Develop a function to find all valid one-letter transformations.\
 Use a dictionary look-up to validate words.\
 Use a stack to trace back steps for transformations.\
-Notes:\\
+Notes:\ \
 Error Checking: Verify words are the same length. Check if dictionary data is available.\
 Testing: Test with:\
 Words with no valid transformations.\
@@ -40,11 +40,11 @@ Develop a function to find a solution using valid transformations.\
 Use a stack to store the sequence of transformations\
 **Extra Credit: Use a queue for breadth-first search (BFS) to find the most efficient path.
 Output each step/word and the total number of steps.\
-Notes:\\
+Notes:\ \
 Error Checking: Check that the start and target words are in the dictionary.\
 Testing: Test with:\
 Easy transformations (e.g., one step away).\
-Challenging transformations (e.g., multiple steps with many choices).\\
+Challenging transformations (e.g., multiple steps with many choices).\ \
 General Suggestions\
 Testing Strategy:\
 Test each function separately before committing\
