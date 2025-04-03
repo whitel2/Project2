@@ -8,7 +8,6 @@
  ********************************************************************************/
 
 #include <iostream>
-//#include <iomanip>
 #include <string>
 #include <vector>
 
@@ -18,13 +17,13 @@ using namespace std;
 
 int main()
 {
-    vector<int> arr{ 170, 245, 315, 174, 326, 32, 17, 26 };
-    RadixSort(arr);
+    vector<string> words = { "apple", "banana", "pear", "peach", "berry", "apple" };
+    RadixSort(words);
 
     cout << "Sorted: " << endl;
-    for (int num : arr)
+    for (string word : words)
     {
-        cout << num << " ";
+        cout << word << endl;
     }
 
     return 0;
