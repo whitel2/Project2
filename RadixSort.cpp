@@ -1,36 +1,48 @@
 //Lauren White - Project 2
 
 #include "RadixSort.h"
-//Edit for strings/chars and add comments
 
-
-void RadixSort(vector<int>& arr)
+//Radix Sort for strings with a max length of 5
+void RadixSort(vector<string>& arr) 
 {
-if (arr.empty()) return;
+    int max_chars = 4;
+    int position;
+    int index;
+    int index2 = 0;
 
-int max_num = *max_element(arr.begin(), arr.end());
-int max_digits = static_cast<int>(log10(max_num) + 1);
-
-vector<queue<int>> queues(10);
-
-for (int digit = 0; digit < max_digits; digit++)
-{
-    //Place numbers into respective queues based on the current digit
-    for (int num : arr)
+    //If the vector is empty, output a warning message and exit the function
+    if (arr.empty())
     {
-        int dig_val = (num / static_cast<int>(pow(10, digit))) % 10;
-        queues[dig_val].push(num);
+        cout << "Error: Word list is empty." << endl;
+        return;
     }
 
-    //Collect numbers back from the queues
-    int index = 0;
-    for (auto& queue : queues)
+    //Create queues for each character in the alphabet
+    vector<queue<string>> queues(27);
+
+    //Sort starting at the least significant character
+    for (position = max_chars; position >= 0; position--)
     {
-        while (!queue.empty())
+        index2 = 0;
+
+        //Place numbers into respective queues based on the current character
+        for (const string& word : arr) 
         {
-            arr[index++] = queue.front();
-            queue.pop();
+            //If the current position is longer than the word, push it into the 0 queue
+            index = (position < word.size()) ? (word[position] - 'a' + 1) : 0; //Suggested by Copilot to manage words less than 5 letters long
+            queues[index].push(word);
+        }
+
+        //Collect words back from the queues
+        for (auto& queue : queues) 
+        {
+            //While there are words in the queues
+            while (!queue.empty()) 
+            {
+                //Add the words to the vector
+                arr[index2++] = queue.front();
+                queue.pop();
+            }
         }
     }
-}
 }
