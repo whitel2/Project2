@@ -1,7 +1,8 @@
 /*********************************************************************************
- * Test Driver for Task 1
+ * Test Driver for Task 1 and Task 2
  *
  * Tests the DictionaryReader class to read in the dictionary
+ * Tests the RadixSort method to sort words lexicographically
  *
  * Author - Lauren White
  * Date - 4/5/25
@@ -15,6 +16,7 @@ using namespace std;
 
 int main() 
 {
+    //Task 1 Test:
     string filename;
 
     //Get the dictionary file name to read in
@@ -51,6 +53,16 @@ int main()
             break; // Exit the loop
         }
     }*/
+
+    //Task 2 Test:
+    vector<string> words = { "apple", "banana", "pear", "peach", "berry", "apple" };
+    RadixSort(words);
+
+    cout << "Sorted: " << endl;
+    for (string word : words)
+    {
+        cout << word << endl;
+    }
 
     return 0;
 }
