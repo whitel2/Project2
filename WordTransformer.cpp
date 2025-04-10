@@ -1,3 +1,4 @@
+// Haris Dedic - Project 2 - Word Transformer
 #include "WordTransformer.h"
 #include <iostream>
 

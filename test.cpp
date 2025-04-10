@@ -1,3 +1,4 @@
+// Haris Dedic - Project 2
 #include <iostream>
 #include "DictionaryReader.h"
 #include "WordTransformer.h"
