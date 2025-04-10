@@ -7,10 +7,11 @@
 #include <vector>
 #include <queue>
 #include <cmath>
+#include <string>
 
 using namespace std;
 
 //Radix sort method used to organize words lexicographically
-void RadixSort(vector<int>& arr);
+void RadixSort(vector<string>& arr);
 
 #endif
