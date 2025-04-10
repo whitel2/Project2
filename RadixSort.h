@@ -10,7 +10,7 @@
 
 using namespace std;
 
-//Radix sort method ussed to organize words lexicographically
+//Radix sort method used to organize words lexicographically
 void RadixSort(vector<int>& arr);
 
 #endif
