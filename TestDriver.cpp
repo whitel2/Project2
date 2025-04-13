@@ -5,18 +5,18 @@
  * Tests the RadixSort method to sort words lexicographically
  *
  * Author - Lauren White
- * Date - 4/5/25
+ * Date - 4/13/25
  ********************************************************************************/
 
 #include <iostream>
 #include <string>
 #include "DictionaryReader.h"
+#include "RadixSort.h"
 
 using namespace std;
 
-int main() 
+int main()
 {
-    //Task 1 Test:
     string filename;
 
     //Get the dictionary file name to read in
@@ -27,7 +27,7 @@ int main()
     vector<string> words = dictionary.getDictionary();
 
     //If there are no words in the dictionary vector, output an error message and exit the function
-    if (words.empty()) 
+    if (words.empty())
     {
         cout << "Error: Dictionary file is empty." << endl;
         return 1;
@@ -35,10 +35,19 @@ int main()
 
     //Output the words from the dictionary
     cout << "Words from the dictionary file:" << endl;
-    for (const string& word : words) 
+    for (const string& word : words)
     {
         cout << word << endl;
     }
+
+    RadixSort(words);
+
+    cout << "Sorted: " << endl;
+    for (string word : words)
+    {
+        cout << word << endl;
+    }
+
 
     /*
     //Visual Studios would not output the entire list, so I had CoPilot write a test to make sure the first 50 words were correctly processed
@@ -53,16 +62,6 @@ int main()
             break; // Exit the loop
         }
     }*/
-
-    //Task 2 Test:
-    vector<string> words = { "apple", "banana", "pear", "peach", "berry", "apple" };
-    RadixSort(words);
-
-    cout << "Sorted: " << endl;
-    for (string word : words)
-    {
-        cout << word << endl;
-    }
 
     return 0;
 }
