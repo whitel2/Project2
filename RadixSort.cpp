@@ -29,7 +29,9 @@ void RadixSort(vector<string>& arr)
         for (const string& word : arr) 
         {
             //If the current position is longer than the word, push it into the 0 queue
-            index = (position < word.size()) ? (word[position] - 'a' + 1) : 0; //Suggested by Copilot to manage words less than 5 letters long
+            index = (position < word.size() && isalpha(word[position])) ? (tolower(word[position]) - 'a' + 1) : 0; 
+            //Suggested by Copilot to manage words less than 5 letters long
+           
             queues[index].push(word);
         }
 
