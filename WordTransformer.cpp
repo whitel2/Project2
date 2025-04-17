@@ -58,7 +58,6 @@ string WordTransformer::identifyCharacterChange(const string& from, const string
 // finds transformation path from start to end
 vector<string> WordTransformer::findTransformPath(const string& start, const string& end) {
     vector<string> path;
-    vector<string> changes; // vector to store char changes
 
     // basic sanity checks
     if (start.length() != end.length()) {
@@ -76,7 +75,7 @@ vector<string> WordTransformer::findTransformPath(const string& start, const str
     int endIndex = findIndex(end);
 
     if (startIndex == -1) {
-        dictionary.push_back(start);  // throw it in if missing
+        dictionary.push_back(start);
         startIndex = dictionary.size() - 1;
     }
     if (endIndex == -1) {
@@ -84,56 +83,41 @@ vector<string> WordTransformer::findTransformPath(const string& start, const str
         endIndex = dictionary.size() - 1;
     }
 
-    // book-keeping
+    // BFS setup
     vector<bool> visited(dictionary.size(), false);
     vector<int> parent(dictionary.size(), -1);
-
-    vector<int> queue; 
+    vector<int> queue;
     int frontIndex = 0;
 
-    // start with the first word
     queue.push_back(startIndex);
     visited[startIndex] = true;
 
-    // classic loop
     while (frontIndex < queue.size()) {
         int current = queue[frontIndex++];
         string currentWord = dictionary[current];
 
-        // for debugging or slow runs — show progress
-        cout << "Checking word: " << currentWord << endl;
-
-        // check all possible next words
         for (int i = 0; i < dictionary.size(); ++i) {
             if (!visited[i] && isOneCharDifferent(currentWord, dictionary[i])) {
                 visited[i] = true;
                 parent[i] = current;
                 queue.push_back(i);
 
-                // identifying the char change between current word and next word - EC2
-                string change = identifyCharacterChange(currentWord, dictionary[i]);
-                if (!change.empty()) {
-                    changes.push_back(change);
-                }
-
-                // found our destination!
                 if (i == endIndex) {
+                    // Backtrack path
                     stack<string> tempStack;
                     int trace = endIndex;
-
-                    // backtrack through parents using a stack
                     while (trace != -1) {
                         tempStack.push(dictionary[trace]);
                         trace = parent[trace];
                     }
 
-                    // build the actual path
+                    // Build path
                     while (!tempStack.empty()) {
                         path.push_back(tempStack.top());
                         tempStack.pop();
                     }
 
-                    // EXTRA CREDIT 1
+                    // Output
                     cout << "\nTransformation path found in " << (path.size() - 1) << " step(s).\n";
                     cout << "Transformation path: ";
                     for (const string& word : path) {
@@ -141,10 +125,10 @@ vector<string> WordTransformer::findTransformPath(const string& start, const str
                     }
                     cout << endl;
 
-                    // EXTRA CREDIT 2 -- need to update and fix!!!!
+                    // Compute character changes
                     cout << "Character changes: ";
-                    for (const string& change : changes) {
-                        cout << change << " ";
+                    for (size_t j = 0; j + 1 < path.size(); ++j) {
+                        cout << identifyCharacterChange(path[j], path[j + 1]) << " ";
                     }
                     cout << endl;
 
@@ -154,6 +138,7 @@ vector<string> WordTransformer::findTransformPath(const string& start, const str
         }
     }
 
-    // if we got here, there's no path
+    // No path found
     return path;
 }
+
