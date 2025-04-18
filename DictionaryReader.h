@@ -1,4 +1,4 @@
-//Lauren White - Project 2
+// Lauren White - Project 2
 #ifndef DICTIONARYREADER_H
 #define DICTIONARYREADER_H
 

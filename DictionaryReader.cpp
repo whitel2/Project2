@@ -1,4 +1,4 @@
-//Lauren White - Project 2
+// Lauren White - Project 2
 #include "DictionaryReader.h"
 #include <fstream>
 

@@ -92,11 +92,11 @@ vector<string> WordTransformer::findTransformPath(const string& start, const str
 
     if (startIndex == -1) {
         dictionary.push_back(start);
-        startIndex = dictionary.size() - 1;
+        startIndex = static_cast<int>(dictionary.size() - 1);
     }
     if (endIndex == -1) {
         dictionary.push_back(end);
-        endIndex = dictionary.size() - 1;
+        endIndex = static_cast<int>(dictionary.size() - 1);
     }
 
     // BFS setup

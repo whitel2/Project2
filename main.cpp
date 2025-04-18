@@ -1,4 +1,4 @@
-// Haris Dedic - Main Program
+// Haris Dedic - Lauren White - Main Program
 #include <iostream>
 #include "DictionaryReader.h"
 #include "WordTransformer.h"

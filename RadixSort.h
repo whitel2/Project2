@@ -1,4 +1,4 @@
-//Lauren White - Project 2
+// Lauren White - Project 2
 
 #ifndef RADIXSORT_H
 #define RADIXSORT_H

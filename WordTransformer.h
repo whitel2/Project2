@@ -1,4 +1,4 @@
-//Haris Dedic - Project 2 - Word Transformer
+// Haris Dedic - Project 2 - Word Transformer
 #pragma once
 #ifndef WORD_TRANSFORMER_H
 #define WORD_TRANSFORMER_H
