@@ -1,4 +1,4 @@
-// Haris Dedic - Lauren White - Main Program
+// Haris Dedic - Main Program
 #include <iostream>
 #include "DictionaryReader.h"
 #include "WordTransformer.h"
@@ -7,13 +7,13 @@
 #include <vector>
 #include <string>
 
-// From Task-3
+// from Task-3
 bool isSorted(const std::vector<std::string>& words);
 std::vector<std::string> removeDuplicates(const std::vector<std::string>& words);
 
 using namespace std;
 
-// Helper to print transformation path
+// helper to print transformation path
 void printPath(const vector<string>& path) {
     if (path.empty()) {
         cout << "No transformation path found.\n";

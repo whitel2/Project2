@@ -18,13 +18,16 @@
     <ClCompile Include="Task-3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WordTransformer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DictionaryReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RadixSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WordTransformer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DictionaryReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RadixSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

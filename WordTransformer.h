@@ -13,6 +13,9 @@ using namespace std;
 class WordTransformer {
 public:
 	WordTransformer(const DictionaryReader& reader);
+	// NEW constructor: initialize with cleaned dictionary
+	WordTransformer(const vector<string>& cleanedDictionary);
+
 
 	vector<string> findTransformPath(const string& startWord, const string& endWord);
 

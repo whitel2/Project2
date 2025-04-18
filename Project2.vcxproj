@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DictionaryReader.cpp" />
+    <ClCompile Include="RadixSort.cpp" />
     <ClCompile Include="Task-3.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="WordTransformer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DictionaryReader.h" />
+    <ClInclude Include="RadixSort.h" />
     <ClInclude Include="WordTransformer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
